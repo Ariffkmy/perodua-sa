@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perodua Sales Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <h1>Perodua</h1>
+          <p>Sales Assistant</p>
+        </div>
+      </div>
+
+      <div class="section-label">Choose Model</div>
+      <nav id="modelList" class="model-list"></nav>
+
+      <div class="advisor-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Sales Advisor Online</strong>
+          <small>Fast response available</small>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Digital Showroom</span>
+          <h2 id="modelTitle">Perodua Ativa</h2>
+        </div>
+        <div class="top-actions">
+          <button class="ghost-btn" id="compareBtn">Compare</button>
+          <button class="primary-btn" id="bookBtn">Book Test Drive</button>
+        </div>
+      </header>
+
+      <section class="dashboard-grid">
+        <article class="vehicle-card">
+          <div class="vehicle-meta">
+            <div>
+              <span id="variantBadge" class="badge">AV</span>
+              <h3 id="vehicleName">Perodua Ativa</h3>
+              <p id="vehicleTagline">Compact SUV built for city driving.</p>
+            </div>
+            <div class="price-block">
+              <span>Starting from</span>
+              <strong id="vehiclePrice">RM 72,600</strong>
+            </div>
+          </div>
+
+          <div class="vehicle-stage">
+            <div class="stage-glow"></div>
+            <img id="vehicleImage" alt="Selected vehicle" />
+            <div class="rotation-label">↻ Drag to explore 360°</div>
+          </div>
+
+          <div class="color-picker">
+            <span>Colour</span>
+            <div id="colorOptions" class="color-options"></div>
+          </div>
+
+          <div class="feature-row" id="featureRow"></div>
+        </article>
+
+        <aside class="right-panel">
+          <section class="panel-card">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">Finance</span>
+                <h3>Loan Calculator</h3>
+              </div>
+              <span class="mini-badge">Estimate</span>
+            </div>
+
+            <label>
+              Car price
+              <div class="input-wrap">
+                <span>RM</span>
+                <input id="priceInput" type="number" min="0" step="100" />
+              </div>
+            </label>
+
+            <label>
+              Deposit
+              <div class="range-line">
+                <input id="depositRange" type="range" min="0" max="30" value="10" />
+                <strong id="depositValue">10%</strong>
+              </div>
+            </label>
+
+            <div class="split-fields">
+              <label>
+                Interest rate
+                <select id="interestSelect">
+                  <option value="2.7">2.7%</option>
+                  <option value="3.0" selected>3.0%</option>
+                  <option value="3.3">3.3%</option>
+                </select>
+              </label>
+
+              <label>
+                Tenure
+                <select id="tenureSelect">
+                  <option value="5">5 years</option>
+                  <option value="7">7 years</option>
+                  <option value="9" selected>9 years</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="monthly-result">
+              <span>Estimated monthly payment</span>
+              <strong id="monthlyPayment">RM 0</strong>
+              <small>Indicative only. Final approval is subject to the bank.</small>
+            </div>
+          </section>
+
+          <section class="panel-card">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">Trade-in</span>
+                <h3>Your Current Car</h3>
+              </div>
+            </div>
+
+            <div class="split-fields">
+              <label>
+                Estimated value
+                <div class="input-wrap">
+                  <span>RM</span>
+                  <input id="tradeValue" type="number" value="25000" />
+                </div>
+              </label>
+
+              <label>
+                Loan settlement
+                <div class="input-wrap">
+                  <span>RM</span>
+                  <input id="settlementValue" type="number" value="18000" />
+                </div>
+              </label>
+            </div>
+
+            <div class="trade-result">
+              <span>Estimated balance</span>
+              <strong id="tradeBalance">RM 7,000</strong>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="bottom-grid">
+        <article class="promo-card">
+          <div>
+            <span class="eyebrow">This Month</span>
+            <h3>Current Promotions</h3>
+          </div>
+          <div class="promo-items">
+            <div>✓ Free tint</div>
+            <div>✓ Free coating</div>
+            <div>✓ Free carpet</div>
+            <div>✓ 5-year warranty</div>
+          </div>
+        </article>
+
+        <article class="stock-card">
+          <div>
+            <span class="eyebrow">Availability</span>
+            <h3>Ready Stock</h3>
+          </div>
+          <strong id="stockStatus">3 units available</strong>
+        </article>
+
+        <article class="cta-card">
+          <div>
+            <span class="eyebrow">Need Help?</span>
+            <h3>Chat with a Sales Advisor</h3>
+          </div>
+          <button class="primary-btn full" id="chatBtn">Start Chat</button>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
