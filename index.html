@@ -36,7 +36,7 @@
       <header class="topbar">
         <div>
           <span class="eyebrow">Digital Showroom</span>
-          <h2 id="modelTitle">Proton X50</h2>
+          <h2 id="modelTitle">PROTON All-New X50</h2>
         </div>
         <div class="top-actions">
           <button class="ghost-btn" id="compareBtn">Compare</button>
@@ -48,12 +48,12 @@
         <article class="vehicle-card">
           <div class="vehicle-meta">
             <div>
-              <span id="variantBadge" class="badge">Flagship</span>
-              <h3 id="vehicleName">Proton X50</h3>
+              <span id="variantBadge" class="badge">SUV</span>
+              <h3 id="vehicleName">PROTON All-New X50</h3>
               <p id="vehicleTagline">Intelligent compact SUV with turbocharged performance.</p>
             </div>
             <div class="price-block">
-              <span>Starting from</span>
+              <span id="priceLabel">Starting Price</span>
               <strong id="vehiclePrice">RM 89,800</strong>
             </div>
           </div>
@@ -69,7 +69,11 @@
             <div id="colorOptions" class="color-options"></div>
           </div>
 
-          <div class="feature-row" id="featureRow"></div>
+          <div class="spec-strip" id="specStrip"></div>
+          <p class="engine-line" id="engineLine"></p>
+
+          <div class="detail-tabs" id="detailTabs"></div>
+          <div class="detail-list" id="detailList"></div>
         </article>
 
         <aside class="right-panel">
@@ -175,10 +179,11 @@
 
         <article class="stock-card">
           <div>
-            <span class="eyebrow">Availability</span>
-            <h3>Ready Stock</h3>
+            <span class="eyebrow">Peace of Mind</span>
+            <h3>Warranty</h3>
           </div>
-          <strong id="stockStatus">3 units available</strong>
+          <strong id="warrantyStatus">5-year / Unlimited mileage warranty</strong>
+          <small id="warrantyDetail" class="warranty-detail"></small>
         </article>
 
         <article class="cta-card">

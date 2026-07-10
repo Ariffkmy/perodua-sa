@@ -22,7 +22,8 @@ http://localhost:8000
 
 ## Included interactions
 
-- Switch between Proton models (X50, S70, Persona, Saga)
+- Switch between 7 Proton models (All-New X50, X70, X90, S70, All-New Saga, Persona, Iriz)
+- Browse full model details in tabs (Exterior, Interior, Infotainment, Safety/ADAS)
 - Update vehicle colour selection
 - Recalculate monthly loan estimate
 - Calculate trade-in balance
