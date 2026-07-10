@@ -1,6 +1,6 @@
-# Perodua Sales Assistant UI
+# Proton Sales Assistant UI
 
-A lightweight HTML/CSS/JavaScript prototype based on the Perodua showroom mockup.
+A lightweight HTML/CSS/JavaScript prototype of a Proton digital showroom with a minimalist, modern interface.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ http://localhost:8000
 
 ## Included interactions
 
-- Switch between Perodua models
+- Switch between Proton models (X50, S70, Persona, Saga)
 - Update vehicle colour selection
 - Recalculate monthly loan estimate
 - Calculate trade-in balance
@@ -30,4 +30,4 @@ http://localhost:8000
 
 ## Note
 
-The car images are placeholder images loaded from Unsplash. Replace the image URLs in `app.js` with official Perodua vehicle assets for production use.
+The car images are placeholder images loaded from Unsplash, and prices are indicative only. Replace the image URLs and pricing in `app.js` with official Proton vehicle assets and current price lists for production use.

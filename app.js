@@ -1,44 +1,44 @@
 
 const models = [
   {
-    name: "Ativa",
-    variant: "AV",
-    price: 72600,
-    tagline: "Compact SUV built for city driving.",
-    stock: "3 units available",
+    name: "X50",
+    variant: "Flagship",
+    price: 89800,
+    tagline: "Intelligent compact SUV with turbocharged performance.",
+    stock: "4 units available",
     image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
-    colors: ["#d73027", "#f4f4f4", "#1d2939", "#6b7280"],
-    features: ["Advanced Safety Assist", "Turbo Performance", "9-inch Display"]
+    colors: ["#c8102e", "#f4f4f4", "#1d2939", "#6b7280"],
+    features: ["ADAS Level 2", "1.5L Turbo", "10.25-inch Display"]
   },
   {
-    name: "Myvi",
-    variant: "AV",
-    price: 59900,
-    tagline: "Malaysia's favourite hatchback.",
+    name: "S70",
+    variant: "Premium X",
+    price: 73800,
+    tagline: "A refined C-segment sedan for the modern family.",
     stock: "6 units available",
     image: "https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80",
     colors: ["#1f4fa3", "#f5f5f5", "#202020", "#a32626"],
-    features: ["Smart Entry", "Fuel Efficient", "Lane Departure Warning"]
+    features: ["Forward Collision Warning", "N95 Cabin Filter", "Adaptive Cruise Control"]
   },
   {
-    name: "Alza",
-    variant: "AV",
-    price: 75500,
-    tagline: "A comfortable 7-seater for the family.",
-    stock: "2 units available",
+    name: "Persona",
+    variant: "Premium",
+    price: 55800,
+    tagline: "A practical sedan with generous space and value.",
+    stock: "5 units available",
     image: "https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80",
     colors: ["#2e3a59", "#f7f7f7", "#6b6b6b", "#7a1d1d"],
-    features: ["7 Seats", "Rear Air Conditioning", "Adaptive Cruise Control"]
+    features: ["510L Boot Space", "Hill Hold Assist", "Remote Engine Start"]
   },
   {
-    name: "Bezza",
-    variant: "AV",
-    price: 49980,
-    tagline: "A practical sedan with excellent fuel economy.",
-    stock: "8 units available",
+    name: "Saga",
+    variant: "Premium S",
+    price: 44800,
+    tagline: "Malaysia's iconic sedan, dependable and efficient.",
+    stock: "9 units available",
     image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80",
     colors: ["#8a1c1c", "#f7f7f7", "#4b5563", "#1e3a5f"],
-    features: ["Large Boot Space", "Eco Idle", "Vehicle Stability Control"]
+    features: ["Eco Drive Mode", "Electronic Stability Control", "Rear Parking Sensors"]
   }
 ];
 
@@ -91,13 +91,13 @@ function renderModelList() {
 
 function renderSelectedModel() {
   const model = models[selectedModel];
-  modelTitle.textContent = `Perodua ${model.name}`;
-  vehicleName.textContent = `Perodua ${model.name}`;
+  modelTitle.textContent = `Proton ${model.name}`;
+  vehicleName.textContent = `Proton ${model.name}`;
   variantBadge.textContent = model.variant;
   vehicleTagline.textContent = model.tagline;
   vehiclePrice.textContent = currency(model.price);
   vehicleImage.src = model.image;
-  vehicleImage.alt = `Perodua ${model.name}`;
+  vehicleImage.alt = `Proton ${model.name}`;
   priceInput.value = model.price;
   stockStatus.textContent = model.stock;
 
